@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://srs-chat-bot.onrender.com', {
+    const response = await fetch('https://what-would-jesus-say.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
