@@ -14,7 +14,7 @@ body {
 #app {
   width: 100vw;
   height: 100vh;
-  background: #383636;
+  background: #fff8f8;
 
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ body {
 }
 
 .ai {
-  background: #050a4b;
+  background: #969aca;
 }
 
 .chat {
@@ -89,7 +89,7 @@ body {
 .message {
   flex: 1;
 
-  color: #dcdcdc;
+  color: #0a0a0a;
   font-size: 20px;
 
   max-width: 100%;
@@ -117,7 +117,9 @@ form {
   max-width: 1280px;
   margin: 0 auto;
   padding: 10px;
-  background: #40414F;
+  background: #eff0fa;
+  border: 2px solid blue;
+  border-radius: 20px;
 
   display: flex;
   flex-direction: row;
@@ -127,7 +129,7 @@ form {
 textarea {
   width: 100%;
 
-  color: #fff;
+  color: rgb(37, 37, 39);
   font-size: 18px;
 
   padding: 10px;
