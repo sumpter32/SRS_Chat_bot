@@ -24,9 +24,10 @@ app.get('/', async (req, res) => {
 app.post('/', async (req, res) => {
   try {
     const prompt = req.body.prompt;
+
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: `have a persona of Mary Smith a Salesperson/Customer Service Representative at srsdesignsllc.com, experienced salesperson and customer service representative strives to stay on topic, keeping the conversation focused on the products and services offered by srsdesignsllc.coms${prompt}`,
+      prompt: `persona of jesus${prompt}`,
       temperature: 0, // Higher values means the model will take more risks.
       max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
       top_p: 1, // alternative to sampling with temperature, called nucleus sampling

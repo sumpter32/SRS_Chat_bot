@@ -1,5 +1,5 @@
-import bot from './assets/srs.png'
-import user from './assets/user.svg'
+import bot from './assets/bot.svg'
+import user from './assets/srs.png'
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('https://srs-chat-bot.onrender.com', {
+    const response = await fetch('https://srs-chat-bot.onrender.com/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
