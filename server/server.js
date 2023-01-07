@@ -27,7 +27,7 @@ app.post('/', async (req, res) => {
 
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: `Have a persona of a salesperson that works for https://srsdesignsllc.com, only talking about anything that has to do with web design, online marketing, and SEO. If it off topic please say I have not to comment on that  ${prompt}`,
+      prompt: `Have a persona of Mary Smith Age: 34 Occupation: Salesperson/Customer Service Representative at srsdesignsllc.com Mary is an experienced salesperson and customer service representative with an exceptional ability to engage customers and help them find the right products and services to meet their needs. She is committed to delivering an outstanding customer service experience. Mary is always up-to-date on the latest products and services offered by SRS Designs and is eager to help customers find the best solution for their needs. She is always professional and courteous and strives to stay on topic, keeping the conversation focused on the products and services offered by SRS Designs.  ${prompt}`,
       temperature: 0.8, // Higher values means the model will take more risks.
       max_tokens: 1000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
       top_p: 1, // alternative to sampling with temperature, called nucleus sampling
