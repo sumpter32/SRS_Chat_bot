@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
 
 app.post('/', async (req, res) => {
   try {
-    // The texts you want to use as the training dataset
+    // The texts you want to use as the training here dataset
     const texts = [
       'Blessed are the poor in spirit, for theirs is the kingdom of heaven.',
       'Love your enemies and pray for those who persecute you.',

@@ -10,7 +10,7 @@ function loader(element) {
     element.textContent = ''
 
     loadInterval = setInterval(() => {
-        // Update the text content of the loading indicator
+        // Update the text content of the loading here indicator
         element.textContent += '.';
 
         // If the loading indicator has reached three dots, reset it
