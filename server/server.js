@@ -34,12 +34,12 @@ app.post('/', async (req, res) => {
 
     // Encode the texts as a JSON array
     const data = JSON.stringify({
-      model: "text-davinci-002",
+      model: "text-davinci-003",
       prompt: texts,
     });
 
     // Create a request object
-    const request = new Request("https://api.openai.com/v1/models/text-davinci-002/finetune", {
+    const request = new Request("https://api.openai.com/v1/models/text-davinci-003/finetune", {
       method: "POST",
       headers: {        
       "Content-Type": "application/json",
@@ -66,7 +66,7 @@ app.post('/', async (req, res) => {
   // Generate a response using the fine-tuned language model
   const prompt = req.body.prompt;
   const response2 = await openai.createCompletion({
-    model: "text-davinci-002",
+    model: "text-davinci-003",
     prompt: `${prompt}`,
     temperature: 0, // Higher values means the model will take more risks.
     max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).

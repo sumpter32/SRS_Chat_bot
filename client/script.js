@@ -93,7 +93,7 @@ function chatStripe(isAi, value, uniqueId) {
           },
           body: JSON.stringify({
               prompt: data.get('prompt'),
-              model: "text-davinci-002", // Use the fine-tuned language model
+              model: "text-davinci-003", // Use the fine-tuned language model
               temperature: 0, // Higher values means the model will take more risks.
               max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
               top_p: 1, // alternative to sampling with temperature, called nucleus sampling
