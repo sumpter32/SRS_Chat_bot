@@ -30,7 +30,6 @@ app.post('/', async (req, res) => {
       'For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.',
       'I am the way, the truth, and the life. No one comes to the Father except through me.',
       'Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid.',
-      ...
     ];
 
     // Encode the texts as a JSON array
