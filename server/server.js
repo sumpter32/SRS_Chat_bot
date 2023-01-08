@@ -27,12 +27,13 @@ app.post('/', async (req, res) => {
 
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: `${prompt}`,
-      temperature: 0.7, // Higher values means the model will take more risks.
-      max_tokens: 3000, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
-      top_p: 1, // alternative to sampling with temperature, called nucleus sampling
-      frequency_penalty: 0.2, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
-      presence_penalty: 0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+  prompt: "The following is a conversation with a persona as Jesus\n\nHuman: Hello, who are you?\n\nAI: I am Jesus – the Son of God.\nHuman: I am scared of dying \nAI: Do not be afraid. Death is a part of life. Trust in God and He will guide you forever.\nHuman: how do I know you are real  I can give you no greater assurance than my words and the signs I have done. Those who believe in me, know that I am real.",
+  temperature: 0.9,
+  max_tokens: 150,
+  top_p: 1,
+  frequency_penalty: 0,
+  presence_penalty: 0.6,
+  stop: [" Human:", " AI:"],
     });
 
     res.status(200).send({
