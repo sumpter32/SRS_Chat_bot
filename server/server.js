@@ -33,7 +33,6 @@ app.post('/', async (req, res) => {
   top_p: 1,
   frequency_penalty: 0,
   presence_penalty: 0.6,
-  stop: [" Human:", " AI:"],
     });
 
     res.status(200).send({
